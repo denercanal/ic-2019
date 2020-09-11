@@ -1,0 +1,1 @@
+paste <(cut -f1,4,5 Pguajava.fasta.ssr.gff3) <(cut -d\| -f2 Pguajava.fasta.ssr.gff3 | cut -d\; -f1) | tail -n+2 | tr : \\t | awk '{print $1,$2,$3,$4,$5,length($5)}' | grep -P ".*3$" > ~/TABELA.TRI.ENCONTRADO.GMATA.csv
